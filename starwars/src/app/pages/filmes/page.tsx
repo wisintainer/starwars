@@ -1,16 +1,22 @@
-import Conteudo from "@/components/ConteudoInicial/page";
+import FilmBox from "@/components/FilmBox/page";
 import Footer from "@/components/Footer/page";
+import { Film } from "@/types/Film";
+import { fetchData } from "@/util/api/api";
 import Topo from "@/widgets/Topo";
 
-export default function Home() {
+const Page = async () => {
+  const filmes: Film[] = await fetchData();
+
   return (
     <div className="bg-gradient-to-r from-black via-gray-800 to-black text-white text-center">
       <header>
         <Topo />
       </header>
 
-      <main className="p-2">
-        <Conteudo />
+      <main>
+        <div>
+          <FilmBox films={filmes} />
+        </div>
       </main>
 
       <footer>
@@ -18,4 +24,5 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+};
+export default Page;
