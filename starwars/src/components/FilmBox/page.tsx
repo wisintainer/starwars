@@ -9,7 +9,7 @@ const FilmBox = (props: FilmsPageProps) => {
   const filmes = props.films;
   return (
     <div className="p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filmes.map((filme, indice) => (
           <div
             className="bg-[#ffe81f] rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-4 flex flex-col"

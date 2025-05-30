@@ -12,7 +12,7 @@ const Menu = () => {
           <li className="hover-texto">Filmes</li>
         </Link>
         <li>-</li>
-        <Link href="/">
+        <Link href="/pages/personagens">
           <li className="hover-texto">Personagens</li>
         </Link>
       </ul>

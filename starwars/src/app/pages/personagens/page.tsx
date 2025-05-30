@@ -1,11 +1,11 @@
-import FilmBox from "@/components/FilmBox/page";
 import Footer from "@/components/Footer/page";
-import { Film } from "@/types/Film";
-import { fetchFilms } from "@/util/api/api";
+import PeopleBox from "@/components/PeopleBox/page";
+import { People } from "@/types/People";
+import { fetchPeople } from "@/util/api/api";
 import Topo from "@/widgets/Topo";
 
 const Page = async () => {
-  const filmes: Film[] = await fetchFilms();
+  const people: People[] = await fetchPeople();
 
   return (
     <div className="bg-gradient-to-r from-black via-gray-800 to-black text-white text-center">
@@ -15,7 +15,7 @@ const Page = async () => {
 
       <main>
         <div>
-          <FilmBox films={filmes} />
+          <PeopleBox people={people} />
         </div>
       </main>
 
